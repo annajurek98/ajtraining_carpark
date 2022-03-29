@@ -21,6 +21,7 @@ public class CarParkRepositoryMockDatabase implements CarParkRepository {
             }
         }
     }
+
     @Override
     public List<Car> fetchAll() {
         return new ArrayList<>(mockDatabase);

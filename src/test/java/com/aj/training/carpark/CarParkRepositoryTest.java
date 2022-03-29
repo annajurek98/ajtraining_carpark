@@ -14,8 +14,8 @@ public class CarParkRepositoryTest {
     @BeforeEach
     void setUp() {
         carParkRepositoryMockDatabase = new CarParkRepositoryMockDatabase();
-        carParkRepositoryMockDatabase.addCar(new Car("WPI 54128","Porshe","Targa"));
-        carParkRepositoryMockDatabase.addCar(new Car("WT 33128","Mazda","XYZ"));
+        carParkRepositoryMockDatabase.addCar(new Car("WPI 54128", "Porshe", "Targa"));
+        carParkRepositoryMockDatabase.addCar(new Car("WT 33128", "Mazda", "XYZ"));
     }
 
     @Test
@@ -31,6 +31,6 @@ public class CarParkRepositoryTest {
         List<Car> initialList = carParkRepositoryMockDatabase.fetchAll();
         carParkRepositoryMockDatabase.deleteCarByNumberPlate("WPI 54128");
         List<Car> updatedList = carParkRepositoryMockDatabase.fetchAll();
-        assertEquals(initialList.size()-1, updatedList.size());
+        assertEquals(initialList.size() - 1, updatedList.size());
     }
 }
