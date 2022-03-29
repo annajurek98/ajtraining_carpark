@@ -14,12 +14,7 @@ public class CarParkRepositoryMockDatabase implements CarParkRepository {
 
     @Override
     public void deleteCarByNumberPlate(String numberPlate) {
-        for (Car car : mockDatabase) {
-            if (car.getNumberPlate().equals(numberPlate)) {
-                mockDatabase.remove(car);
-                break;
-            }
-        }
+        mockDatabase.removeIf(car -> car.getNumberPlate().equals(numberPlate));
     }
 
     @Override
